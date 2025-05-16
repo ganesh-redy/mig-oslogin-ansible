@@ -40,10 +40,7 @@
           chmod +x /usr/local/bin/harness-docker-runner
         fi
 
-    - name: Stop and remove all running/stopped containers (if any)
-      shell: |
-        docker ps -aq | xargs --no-run-if-empty docker rm -f
-      ignore_errors: true
+   
 
     - name: Run Harness Delegate container
       shell: |
